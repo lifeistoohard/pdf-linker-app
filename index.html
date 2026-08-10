@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Link Generator - WSM System</title>
+  
+  <!-- Tailwind CSS & FontAwesome Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background-color: #F3F4F6;
+    }
+    .theme-bg {
+      background: #1E3A8A; /* Deep Blue สไตล์ WSM */
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col min-h-screen">
+
+  <!-- Header Bar -->
+  <header class="theme-bg text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+          <i class="fas fa-link text-xl text-blue-200"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight">WSM Management System</h1>
+          <p class="text-xs text-blue-200">PDF Auto Link Generator Tool</p>
+        </div>
+      </div>
+      
+      <!-- ปุ่มเปิดหน้าแยก -->
+      <a href="https://pdf-link.streamlit.app/" target="_blank" 
+         class="text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-2 rounded-lg transition border border-white/20 flex items-center gap-2">
+        <span>เปิดหน้าต่างใหญ่</span>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col">
+    
+    <!-- Info Card Header -->
+    <div class="bg-white rounded-xl shadow-sm p-4 mb-4 border border-gray-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="flex items-start gap-3">
+        <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 shrink-0 mt-1 md:mt-0">
+          <i class="fas fa-magic text-lg"></i>
+        </div>
+        <div>
+          <h2 class="font-bold text-gray-800 text-base">ระบบสร้างลิงก์เชื่อมโยงสารบัญ PDF อัตโนมัติ</h2>
+          <p class="text-xs text-gray-500">อัปโหลดไฟล์คู่มือการซ่อม ระบบจะสแกนสารบัญและสร้าง Hyperlink ให้กดกระโดดไปหน้าเป้าหมายทันที</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-xs text-gray-400 border-t md:border-t-0 pt-2 md:pt-0 border-gray-100">
+        <i class="fas fa-shield-alt text-green-500"></i>
+        <span>ประมวลผลปลอดภัย ไฟล์จะถูกลบทันทีหลังดาวน์โหลด</span>
+      </div>
+    </div>
+
+    <!-- Iframe Container -->
+    <div class="bg-white rounded-xl shadow-lg border border-gray-200 flex-1 overflow-hidden relative min-h-[700px]">
+      <iframe 
+        src="https://pdf-link.streamlit.app/?embed=true" 
+        class="w-full h-full absolute inset-0"
+        style="border:none;"
+        allow="downloads">
+      </iframe>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-3 text-center text-xs text-gray-400">
+    © 2026 WSM System - Service Workshop Manual Link Generator by NA
+  </footer>
+
+</body>
+</html>
