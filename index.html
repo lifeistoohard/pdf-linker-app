@@ -58,7 +58,7 @@
             padding: 20px 24px;
             border-radius: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             border-left: 6px solid #1976d2; /* ใช้สีน้ำเงินคุมธีม */
             display: flex;
             justify-content: space-between;
@@ -77,6 +77,26 @@
             font-size: 14px;
             margin: 0;
             color: #666;
+        }
+
+        /* การ์ดแจ้งเตือนความปลอดภัย (Security Notice Card) */
+        .security-card {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            padding: 12px 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #2e7d32;
+            font-size: 13.5px;
+        }
+
+        .security-card i {
+            font-size: 18px;
+            color: #2e7d32;
+            flex-shrink: 0;
         }
 
         /* ปุ่มกดสไตล์ Google / Translator เดิม */
@@ -124,7 +144,7 @@
             border: none;
         }
 
-        /* Footer สไตล์เดิมเป๊ะๆ */
+        /* Footer สไตล์เดิม */
         .footer {
             text-align: center;
             font-size: 14px;
@@ -157,14 +177,14 @@
 </head>
 <body>
 
-    <!-- Header Image (ถ้ามีรูป trans_head.png ใน repo มันจะดึงมาโชว์ให้อัตโนมัติ) -->
+    <!-- Header Image -->
     <header>
         <img src="trans_head.png" alt="WSM Header" onerror="this.style.display='none'" />
     </header>
 
     <h1>🔗 WSM PDF Link Generator</h1>
 
-    <!-- Card แจ้งรายละเอียด -->
+    <!-- Card รายละเอียดโปรแกรม -->
     <div class="main-card">
         <div class="main-card-info">
             <h2>โปรแกรมสร้างลิงก์เชื่อมโยงสารบัญ PDF</h2>
@@ -175,6 +195,14 @@
         </a>
     </div>
 
+    <!-- Card แจ้งเตือนความปลอดภัยและความเป็นส่วนตัว -->
+    <div class="security-card">
+        <i class="fas fa-shield-halved"></i>
+        <div>
+            <strong>นโยบายความเป็นส่วนตัวและความปลอดภัย:</strong> ระบบจะประมวลผลไฟล์ชั่วคราวใน Memory เท่านั้น ไม่มีการบันทึกหรือเก็บไฟล์เอกสารใดๆ ไว้ในระบบ และไฟล์จะถูกลบทิ้งทันทีเมื่อทำงานเสร็จสิ้นหรือเมื่อปิดหน้าเว็บ
+        </div>
+    </div>
+
     <!-- กรอบแสดงผล Streamlit App -->
     <div class="iframe-container">
         <iframe 
@@ -183,11 +211,12 @@
         </iframe>
     </div>
 
-    <!-- Footer เมนูเดิมของคุณ -->
+    <!-- Footer เมนูเดิม -->
     <div class="footer">
         Created by <strong>NA</strong> | 
         <a href="https://lifeistoohard.github.io/wsm-stock-viewer/service/service.html" target="_blank">ไปยัง Service Bulletins</a> | 
-        <a href="https://lifeistoohard.github.io/wsm-stock-viewer/ParsTranslator.html">Part name Translator</a> | <a href="https://lifeistoohard.github.io/wsm-stock-viewer/tf-model.html" target="_blank">Model Name Search</a> | 
+        <a href="https://lifeistoohard.github.io/wsm-stock-viewer/ParsTranslator.html">Part name Translator</a> | 
+        <a href="https://lifeistoohard.github.io/pdf-linker-app/">WSM Link Generator</a> | 
         <a href="https://lifeistoohard.github.io/wsm-stock-viewer/maintenance">Maintenance Search</a>
     </div>
 
