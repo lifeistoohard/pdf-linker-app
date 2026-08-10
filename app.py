@@ -22,7 +22,7 @@ st.write("อัปโหลดไฟล์ PDF คู่มือเพื่�
 # 1. ตัวเลือกประเภทคู่มือ
 doc_type = st.radio(
     "📌 เลือกประเภทคู่มือ:",
-    ("OM (Owner's Manual - คู่มือผู้ใช้รถ)", "WSM (Workshop Manual - คู่มือการซ่อม)"),
+    ("OM (Owner's Manual - คู่มือการใช้รถ)", "WSM (Workshop Manual - คู่มือการซ่อม)"),
     index=0
 )
 
