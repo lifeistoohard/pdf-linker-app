@@ -47,7 +47,7 @@ if uploaded_file is not None:
 
             # ==================== ลอจิก OM ====================
             if "OM" in doc_type:
-                page_code_pattern = re.compile(r'\b([0-9]{1,2}-[0-9]{1,3})\b')
+                page_code_pattern = re.compile(r'\b([A-Za-z0-9]{1,3}-[0-9]{1,3})\b')
 
                 status_text.info("🔍 Pass 1: สแกนหาเลขหน้าจากขอบบนกระดาษ (Header 45pt)...")
                 page_map = {}
@@ -66,7 +66,7 @@ if uploaded_file is not None:
 
                 status_text.info("🔗 Pass 2: วาดลิงก์คำอ้างอิงและตารางทั้งหมด...")
                 total_links = 0
-                ref_pattern = re.compile(r'(?:→\s*)?(?:หน้า\s*)?\b([0-9]{1,2}-[0-9]{1,3})\b')
+                ref_pattern = re.compile(r'(?:→\s*)?(?:หน้า\s*)?\b([A-Za-z0-9]{1,3}-[0-9]{1,3})\b')
 
                 for page_index in range(total_pages):
                     page = doc[page_index]
